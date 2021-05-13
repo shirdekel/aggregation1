@@ -1,0 +1,112 @@
+TRACE [2021-05-13 15:30:59] Logging to /Users/shirdekel/Dropbox (Sydney Uni)/Thesis/R/experiment_packages/aggregation/aggregation1/inst/extdata/Logfiles/processing.log
+TRACE [2021-05-13 15:30:59] Processing data
+TRACE [2021-05-13 15:30:59] Reading yaml configuration
+TRACE [2021-05-13 15:30:59] Found /Users/shirdekel/Dropbox (Sydney Uni)/Thesis/R/experiment_packages/aggregation/aggregation1/data-raw/data.Rmd
+TRACE [2021-05-13 15:30:59] Processing 1 of 1: /Users/shirdekel/Dropbox (Sydney Uni)/Thesis/R/experiment_packages/aggregation/aggregation1/data-raw/data.Rmd
+
+TRACE [2021-05-13 15:31:19] 1 data set(s) created by data.Rmd
+TRACE [2021-05-13 15:31:19] NEWS.md file not found, creating!
+TRACE [2021-05-13 15:31:19] NEWS.md file found, updating!
+TRACE [2021-05-13 15:31:25] Saving to data
+TRACE [2021-05-13 15:31:25] Copied documentation to /Users/shirdekel/Dropbox (Sydney Uni)/Thesis/R/experiment_packages/aggregation/aggregation1/R/aggregation1.R
+TRACE [2021-05-13 15:31:25] Done
+TRACE [2021-05-13 15:31:25] DataPackageR succeeded
+TRACE [2021-05-13 15:31:25] Building documentation
+TRACE [2021-05-13 15:31:25] Building package
+TRACE [2021-05-13 15:32:18] Logging to /Users/shirdekel/Dropbox (Sydney Uni)/Thesis/R/experiment_packages/aggregation/aggregation1/inst/extdata/Logfiles/processing.log
+TRACE [2021-05-13 15:32:18] Processing data
+TRACE [2021-05-13 15:32:18] Reading yaml configuration
+TRACE [2021-05-13 15:32:18] Found /Users/shirdekel/Dropbox (Sydney Uni)/Thesis/R/experiment_packages/aggregation/aggregation1/data-raw/data.Rmd
+TRACE [2021-05-13 15:32:18] Processing 1 of 1: /Users/shirdekel/Dropbox (Sydney Uni)/Thesis/R/experiment_packages/aggregation/aggregation1/data-raw/data.Rmd
+
+TRACE [2021-05-13 15:32:40] 1 data set(s) created by data.Rmd
+TRACE [2021-05-13 15:32:40] NEWS.md file found, updating!
+TRACE [2021-05-13 15:32:40] Processed data sets match existing data sets at version 0.1.0
+TRACE [2021-05-13 15:32:40] Saving to data
+TRACE [2021-05-13 15:32:40] Copied documentation to /Users/shirdekel/Dropbox (Sydney Uni)/Thesis/R/experiment_packages/aggregation/aggregation1/R/aggregation1.R
+TRACE [2021-05-13 15:32:40] Done
+TRACE [2021-05-13 15:32:40] DataPackageR succeeded
+TRACE [2021-05-13 15:32:40] Building documentation
+TRACE [2021-05-13 15:32:41] Building package
+TRACE [2021-05-13 15:34:45] Logging to /Users/shirdekel/Dropbox (Sydney Uni)/Thesis/R/experiment_packages/aggregation/aggregation1/inst/extdata/Logfiles/processing.log
+TRACE [2021-05-13 15:34:45] Processing data
+TRACE [2021-05-13 15:34:45] Reading yaml configuration
+TRACE [2021-05-13 15:34:45] Found /Users/shirdekel/Dropbox (Sydney Uni)/Thesis/R/experiment_packages/aggregation/aggregation1/data-raw/data.Rmd
+TRACE [2021-05-13 15:34:45] Processing 1 of 1: /Users/shirdekel/Dropbox (Sydney Uni)/Thesis/R/experiment_packages/aggregation/aggregation1/data-raw/data.Rmd
+
+TRACE [2021-05-13 15:35:06] 1 data set(s) created by data.Rmd
+TRACE [2021-05-13 15:35:06] NEWS.md file found, updating!
+TRACE [2021-05-13 15:35:06] Processed data sets match existing data sets at version 0.1.0
+TRACE [2021-05-13 15:35:06] Saving to data
+TRACE [2021-05-13 15:35:06] Copied documentation to /Users/shirdekel/Dropbox (Sydney Uni)/Thesis/R/experiment_packages/aggregation/aggregation1/R/aggregation1.R
+TRACE [2021-05-13 15:35:06] Done
+TRACE [2021-05-13 15:35:06] DataPackageR succeeded
+TRACE [2021-05-13 15:35:06] Building documentation
+TRACE [2021-05-13 15:35:07] Building package
+TRACE [2021-05-13 15:39:43] Logging to /Users/shirdekel/Dropbox (Sydney Uni)/Thesis/R/experiment_packages/aggregation/aggregation1/inst/extdata/Logfiles/processing.log
+TRACE [2021-05-13 15:39:43] Processing data
+TRACE [2021-05-13 15:39:43] Reading yaml configuration
+TRACE [2021-05-13 15:39:43] Found /Users/shirdekel/Dropbox (Sydney Uni)/Thesis/R/experiment_packages/aggregation/aggregation1/data-raw/data.Rmd
+TRACE [2021-05-13 15:39:43] Processing 1 of 1: /Users/shirdekel/Dropbox (Sydney Uni)/Thesis/R/experiment_packages/aggregation/aggregation1/data-raw/data.Rmd
+
+TRACE [2021-05-13 15:40:07] 1 data set(s) created by data.Rmd
+TRACE [2021-05-13 15:40:07] NEWS.md file found, updating!
+TRACE [2021-05-13 15:40:07] Processed data sets match existing data sets at version 0.1.0
+TRACE [2021-05-13 15:40:07] Saving to data
+TRACE [2021-05-13 15:40:07] Copied documentation to /Users/shirdekel/Dropbox (Sydney Uni)/Thesis/R/experiment_packages/aggregation/aggregation1/R/aggregation1.R
+TRACE [2021-05-13 15:40:07] Done
+TRACE [2021-05-13 15:40:07] DataPackageR succeeded
+TRACE [2021-05-13 15:40:07] Building documentation
+TRACE [2021-05-13 15:40:08] Building package
+TRACE [2021-05-13 17:14:03] Rebuilding data package documentation.
+TRACE [2021-05-13 17:14:18] Logging to /Users/shirdekel/Dropbox (Sydney Uni)/Thesis/R/experiment_packages/aggregation/aggregation1/inst/extdata/Logfiles/processing.log
+TRACE [2021-05-13 17:14:18] Processing data
+TRACE [2021-05-13 17:14:18] Reading yaml configuration
+TRACE [2021-05-13 17:14:18] Found /Users/shirdekel/Dropbox (Sydney Uni)/Thesis/R/experiment_packages/aggregation/aggregation1/data-raw/data.Rmd
+TRACE [2021-05-13 17:14:18] Processing 1 of 1: /Users/shirdekel/Dropbox (Sydney Uni)/Thesis/R/experiment_packages/aggregation/aggregation1/data-raw/data.Rmd
+
+TRACE [2021-05-13 17:14:38] 1 data set(s) created by data.Rmd
+TRACE [2021-05-13 17:14:38] NEWS.md file found, updating!
+TRACE [2021-05-13 17:14:38] Processed data sets match existing data sets at version 0.1.0
+TRACE [2021-05-13 17:14:38] Saving to data
+TRACE [2021-05-13 17:14:38] Copied documentation to /Users/shirdekel/Dropbox (Sydney Uni)/Thesis/R/experiment_packages/aggregation/aggregation1/R/aggregation1.R
+TRACE [2021-05-13 17:14:38] Done
+TRACE [2021-05-13 17:14:38] DataPackageR succeeded
+TRACE [2021-05-13 17:14:38] Building documentation
+TRACE [2021-05-13 17:14:39] Building package
+TRACE [2021-05-13 17:14:55] Logging to /Users/shirdekel/Dropbox (Sydney Uni)/Thesis/R/experiment_packages/aggregation/aggregation1/inst/extdata/Logfiles/processing.log
+TRACE [2021-05-13 17:14:55] Processing data
+TRACE [2021-05-13 17:14:55] Reading yaml configuration
+TRACE [2021-05-13 17:14:55] Found /Users/shirdekel/Dropbox (Sydney Uni)/Thesis/R/experiment_packages/aggregation/aggregation1/data-raw/data.Rmd
+TRACE [2021-05-13 17:14:55] Processing 1 of 1: /Users/shirdekel/Dropbox (Sydney Uni)/Thesis/R/experiment_packages/aggregation/aggregation1/data-raw/data.Rmd
+
+TRACE [2021-05-13 17:15:15] 1 data set(s) created by data.Rmd
+TRACE [2021-05-13 17:15:15] NEWS.md file found, updating!
+TRACE [2021-05-13 17:15:15] Processed data sets match existing data sets at version 0.1.0
+TRACE [2021-05-13 17:15:15] Saving to data
+TRACE [2021-05-13 17:15:15] Copied documentation to /Users/shirdekel/Dropbox (Sydney Uni)/Thesis/R/experiment_packages/aggregation/aggregation1/R/aggregation1.R
+TRACE [2021-05-13 17:15:15] Done
+TRACE [2021-05-13 17:15:15] DataPackageR succeeded
+TRACE [2021-05-13 17:15:15] Building documentation
+TRACE [2021-05-13 17:15:15] Building package
+TRACE [2021-05-13 17:23:10] Rebuilding data package documentation.
+TRACE [2021-05-13 17:23:39] Logging to /Users/shirdekel/Dropbox (Sydney Uni)/Thesis/R/experiment_packages/aggregation/aggregation1/inst/extdata/Logfiles/processing.log
+TRACE [2021-05-13 17:23:39] Processing data
+TRACE [2021-05-13 17:23:39] Reading yaml configuration
+TRACE [2021-05-13 17:23:39] Found /Users/shirdekel/Dropbox (Sydney Uni)/Thesis/R/experiment_packages/aggregation/aggregation1/data-raw/data.Rmd
+TRACE [2021-05-13 17:23:39] Processing 1 of 1: /Users/shirdekel/Dropbox (Sydney Uni)/Thesis/R/experiment_packages/aggregation/aggregation1/data-raw/data.Rmd
+
+TRACE [2021-05-13 17:23:59] 1 data set(s) created by data.Rmd
+TRACE [2021-05-13 17:23:59] NEWS.md file found, updating!
+WARN [2021-05-13 17:23:59] data has changed.
+WARN [2021-05-13 17:23:59] data has changed.
+WARN [2021-05-13 17:23:59] data has changed.
+TRACE [2021-05-13 17:23:59] NEWS.md file found, updating!
+TRACE [2021-05-13 17:24:03] NEWS.md file found, updating!
+TRACE [2021-05-13 17:24:03] Data has been updated and DataVersion string incremented automatically to 0.1.1
+TRACE [2021-05-13 17:24:03] Saving to data
+TRACE [2021-05-13 17:24:03] Copied documentation to /Users/shirdekel/Dropbox (Sydney Uni)/Thesis/R/experiment_packages/aggregation/aggregation1/R/aggregation1.R
+TRACE [2021-05-13 17:24:03] Done
+TRACE [2021-05-13 17:24:03] DataPackageR succeeded
+TRACE [2021-05-13 17:24:03] Building documentation
+TRACE [2021-05-13 17:24:04] Building package

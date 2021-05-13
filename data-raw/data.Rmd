@@ -1,0 +1,119 @@
+---
+title: Clean aggregation 1 data
+author: Shir Dekel
+date: '`r format(Sys.time())`'
+output_format: html_document
+---
+
+Load packages and functions
+
+```{r}
+source(DataPackageR::project_path("packages.R"))
+project_path("R") %>%
+  list.files(full.names = TRUE) %>%
+  lapply(source)
+```
+
+Clean data
+
+```{r}
+data_raw_filtered <-
+  project_extdata_path("pavlovia") %>%
+  list.files(full.names = TRUE) %>%
+  map_dfr(~ .x %>%
+    read_csv(col_types = cols()))
+
+names_to <- c("condition", "project", "pos", "dif", "prob")
+names_pattern <- "(.*)_cond_(.*)_(.*)_(.*)_(.*)"
+
+data_prep <- data_raw_filtered %>%
+  rename(
+    similarity = alignment_cond,
+    awareness = awareness_cond
+  ) %>%
+  group_by(subject, similarity, awareness) %>%
+  nest()
+
+data_combined <- data_prep %>%
+  mutate(
+    df = map(data, extract_data, names_to, names_pattern),
+    ## Milliseconds to minutes
+    total_time = map_dbl(data, shiR::gettime) / 60000,
+    data = NULL
+  )
+
+data <-
+  data_combined %>%
+  unnest(df) %>%
+  mutate_at(c("prolific"), as.character) %>%
+  filter(
+    !is.na(prolific),
+    !str_detect(prolific, "test"),
+    !str_detect(prolific, "asdfasdf"),
+    !str_detect(prolific, "12341234"),
+    age >= 18
+  ) %>%
+  nest() %>%
+  rowid_to_column("id") %>%
+  unnest(data) %>%
+  ungroup() %>%
+  mutate(
+    similarity = recode(similarity, lowA = "low", highA = "high"),
+    value = as.double(as.character(recode(value, "Yes" = 1, "No" = 0))),
+    id = as.factor(id),
+    condition = replace_na(condition, "check_aggregated"),
+    condition = case_when(
+      dif == "250" & pos == "100" ~ "check_neg_1",
+      dif == "250" & pos == "50" ~ "check_neg_2",
+      condition == "check_redelmeier" & prob == "0.5" ~ "check_redelmeier-single",
+      condition == "check_redelmeier" & prob == "0.5.1" ~ "check_redelmeier-multiple",
+      condition == "check_redelmeier" & prob == "0.5.2" ~ "check_redelmeier-aggregated",
+      condition == "check_samuelson" & prob == "0.5" ~ "check_samuelson-single",
+      condition == "check_samuelson" & prob == "0.5.1" ~ "check_samuelson-multiple",
+      condition == "check_samuelson" & prob == "0.5.2" ~ "check_samuelson-aggregated",
+      condition == "check_samuelson_original" & prob == "0.5" ~ "check_samuelson-original-single",
+      condition == "check_samuelson_original" & prob == "0.5.1" ~ "check_samuelson-original-multiple",
+      condition == "check_samuelson_original" & prob == "0.5.2" ~ "check_samuelson-original-aggregated",
+      condition == "check" & (project == "no.project" | project == "no-project") & dif == "3000" & prob == "0.5" ~ "check_redelmeier-single",
+      condition == "check" & (project == "no.project" | project == "no-project") & dif == "3000" & prob == "0.5.1" ~ "check_redelmeier-multiple",
+      condition == "check" & (project == "no.project" | project == "no-project") & dif == "3000" & prob == "0.5.2" ~ "check_redelmeier-aggregated",
+      condition == "check" & (project == "oil.well" | project == "oil-well") & dif == "300" & prob == "0.5" ~ "check_samuelson-single",
+      condition == "check" & (project == "oil.well" | project == "oil-well") & dif == "300" & prob == "0.5.1" ~ "check_samuelson-multiple",
+      condition == "check" & (project == "oil.well" | project == "oil-well") & dif == "300" & prob == "0.5.2" ~ "check_samuelson-aggregated",
+      condition == "check" & (project == "no.project" | project == "no-project") & dif == "300" & prob == "0.5" ~ "check_samuelson-original-single",
+      condition == "check" & (project == "no.project" | project == "no-project") & dif == "300" & prob == "0.5.1" ~ "check_samuelson-original-multiple",
+      condition == "check" & (project == "no.project" | project == "no-project") & dif == "300" & prob == "0.5.2" ~ "check_samuelson-original-aggregated",
+      condition == "check" & (project == "oil.well" | project == "oil-well") & dif == "250" ~ "check_neg",
+      condition == "presentation_separate" ~ "separate",
+      condition == "presentation_joint" ~ "joint",
+      TRUE ~ as.character(condition)
+    ),
+    across(
+      condition,
+      ~ .x %>%
+        str_replace_all("_", "-") %>%
+        str_replace("check-|rep-", "follow_up_")
+    )
+  ) %>%
+  nest_by(id) %>%
+  mutate(across(data, ~ .x %>%
+    pivot_aggregation_1() %>%
+    list())) %>%
+  unnest(data) %>%
+  rename_with(~ .x %>%
+    str_remove("follow_up_") %>%
+    str_replace_all("-", "_")) %>%
+  group_by(subject, presentation) %>%
+  nest() %>%
+  mutate(proportion = map_dbl(data, get_risk)) %>%
+  unnest(data) %>%
+  ungroup() %>%
+  mutate(
+    across(where(check_numeric), as.numeric),
+    sample = "prolific"
+  ) %>%
+  mutate_at(c("similarity", "awareness", "presentation"), as.factor) %>%
+  ## Remove non-essential information
+  select(-c(contact, address, prolific))
+```
+
