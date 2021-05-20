@@ -38,7 +38,7 @@ data_combined <- data_prep %>%
   mutate(
     df = map(data, extract_data, names_to, names_pattern),
     ## Milliseconds to minutes
-    total_time = map_dbl(data, shiR::gettime) / 60000,
+    total_time = map_dbl(data, shirthesis::get_time) / 60000,
     data = NULL
   )
 

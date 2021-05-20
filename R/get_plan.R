@@ -5,10 +5,15 @@
 #' @export
 get_plan <- function() {
   drake_plan(
-    experiment_directory = target(
+    experiment = target(
       file.path("inst", "experiment"),
       target = "file"
     ),
-    materials = get_screenshots(experiment_directory)
+    # Same as above, but order not randomised (in `main.js`)
+    experiment_testing = target(
+      file.path("inst", "experiment_testing"),
+      target = "file"
+    ),
+    materials = get_screenshots(experiment_testing)
   )
 }
