@@ -1,1 +1,3 @@
 ^\./renv$
+^inst/extdata/pavlovia$
+^inst/extdata/Logfiles$
