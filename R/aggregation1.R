@@ -1,10 +1,10 @@
 #' aggregation1
-#' A data package for aggregation1.
+#' A data package for the Aggregation 1 experiment.
 #' @docType package
 #' @aliases aggregation1-package
-#' @title Package Title
+#' @title Aggregation 1 experiment
 #' @name aggregation1
-#' @description A description of the data package
+#' @description Data, materials, and experiment code for the Aggregation 1 experiment.
 #' @details Use \code{data(package='aggregation1')$results[, 3]} to see a list of available data sets in this data package
 #'     and/or DataPackageR::load_all
 #' _datasets() to load them.
@@ -18,7 +18,7 @@ NULL
 #' Detailed description of the data
 #' @name data
 #' @docType data
-#' @title Descriptive data title
+#' @title Aggregation 1 data
 #' @format a \code{tbl_df} containing the following fields:
 #' \describe{
 #' \item{subject}{}
@@ -104,7 +104,7 @@ NULL
 #' \item{proportion}{}
 #' \item{sample}{}
 #' }
-#' @source The data comes from________________________.
+#' @source The data was collected using Prolific.
 #' @seealso
 #' \link{aggregation1}
 NULL

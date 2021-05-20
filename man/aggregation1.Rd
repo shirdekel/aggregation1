@@ -4,13 +4,13 @@
 \name{aggregation1}
 \alias{aggregation1}
 \alias{aggregation1-package}
-\title{Package Title}
+\title{Aggregation 1 experiment}
 \description{
-A description of the data package
+Data, materials, and experiment code for the Aggregation 1 experiment.
 }
 \details{
 aggregation1
-A data package for aggregation1.
+A data package for the Aggregation 1 experiment.
 
 Use \code{data(package='aggregation1')$results[, 3]} to see a list of available data sets in this data package
 and/or DataPackageR::load_all

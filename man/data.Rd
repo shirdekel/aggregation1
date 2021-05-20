@@ -3,7 +3,7 @@
 \docType{data}
 \name{data}
 \alias{data}
-\title{Descriptive data title}
+\title{Aggregation 1 data}
 \format{
 a \code{tbl_df} containing the following fields:
 \describe{
@@ -92,7 +92,7 @@ a \code{tbl_df} containing the following fields:
 }
 }
 \source{
-The data comes from________________________.
+The data was collected using Prolific.
 }
 \description{
 Detailed description of the data
