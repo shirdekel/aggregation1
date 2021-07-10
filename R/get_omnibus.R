@@ -5,7 +5,7 @@
 #' @export
 get_omnibus <- function(data) {
   data %>%
-    nest_by(id, similarity, awareness, presentation, proportion) %>%
+    dplyr::nest_by(id, similarity, awareness, presentation, proportion) %>%
     afex::aov_ez(
       dv = "proportion",
       id = "id",

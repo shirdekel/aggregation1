@@ -22,4 +22,10 @@ VignetteBuilder: knitr
 URL: https://github.com/shirdekel/aggregation1
 BugReports: https://github.com/shirdekel/aggregation1/issues
 Imports: 
-    magrittr
+    afex,
+    papaja,
+    dplyr,
+    magrittr,
+    ggplot2,
+    tibble,
+    stringr

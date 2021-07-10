@@ -26,12 +26,12 @@ get_plot <- function(data = aggregation1::data) {
         )
       )
     ) +
-    labs(
+    ggplot2::labs(
       x = "Awareness",
       y = dv_label
     ) +
     papaja::theme_apa() +
-    theme(legend.position = "none")
+    ggplot2::theme(legend.position = "none")
 
   presentation <-
     proportion_omnibus %>%
@@ -49,12 +49,12 @@ get_plot <- function(data = aggregation1::data) {
         )
       )
     ) +
-    labs(
+    ggplot2::labs(
       x = "Presentation",
       y = dv_label
     ) +
     papaja::theme_apa() +
-    theme(legend.position = "none")
+    ggplot2::theme(legend.position = "none")
 
 
   similarity_presentation <-
@@ -83,7 +83,7 @@ get_plot <- function(data = aggregation1::data) {
       ),
       legend_title = "Presentation"
     ) +
-    labs(
+    ggplot2::labs(
       x = "Similarity",
       y = dv_label
     ) +
@@ -91,28 +91,28 @@ get_plot <- function(data = aggregation1::data) {
 
   data_trials <-
     data %>%
-    mutate(
-      across(
+    dplyr::mutate(
+      dplyr::across(
         c(awareness, similarity, presentation),
-        str_to_sentence
+        stringr::str_to_sentence
       )
     )
 
   trials <-
     data_trials %>%
-    ggplot(
-      aes(
+    ggplot2::ggplot(
+      ggplot2::aes(
         x = project_order,
         y = choice,
         color = awareness,
         linetype = awareness
       )
     ) +
-    geom_smooth(method = "loess") +
-    facet_wrap(vars(similarity, presentation), labeller = "label_both") +
-    scale_x_continuous("Trial", breaks = 1:10) +
+    ggplot2::geom_smooth(method = "loess") +
+    ggplot2::facet_wrap(ggplot2::vars(similarity, presentation), labeller = "label_both") +
+    ggplot2::scale_x_continuous("Trial", breaks = 1:10) +
     papaja::theme_apa() +
-    labs(
+    ggplot2::labs(
       y = "Proportion of project acceptance",
       color = "Awareness",
       linetype = "Awareness"
@@ -120,25 +120,25 @@ get_plot <- function(data = aggregation1::data) {
 
   trials_separate_awareness <-
     data_trials %>%
-    filter(presentation == "Separate") %>%
-    ggplot(
-      aes(
+    dplyr::filter(presentation == "Separate") %>%
+    ggplot2::ggplot(
+      ggplot2::aes(
         x = project_order,
         y = choice,
         color = awareness,
         linetype = awareness
       )
     ) +
-    geom_smooth(method = "loess") +
-    scale_x_continuous("Trial", breaks = 1:10) +
+    ggplot2::geom_smooth(method = "loess") +
+    ggplot2::scale_x_continuous("Trial", breaks = 1:10) +
     papaja::theme_apa() +
-    labs(
+    ggplot2::labs(
       y = "Proportion of project acceptance",
       color = "Awareness",
       linetype = "Awareness"
     )
 
-  lst(
+  tibble::lst(
     awareness,
     presentation,
     similarity_presentation,
