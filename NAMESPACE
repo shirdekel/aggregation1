@@ -2,7 +2,9 @@
 
 export(extract_data)
 export(get_file_name_materials_experiment1)
+export(get_omnibus)
 export(get_plan)
+export(get_plot)
 export(get_risk)
 export(get_screenshots)
 export(pivot_aggregation_1)
